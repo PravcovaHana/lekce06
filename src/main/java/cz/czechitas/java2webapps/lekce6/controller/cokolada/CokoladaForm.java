@@ -1,41 +1,28 @@
-package cz.czechitas.java2webapps.lekce6.controller.alkohol;
+package cz.czechitas.java2webapps.lekce6.controller.cokolada;
 
+import cz.czechitas.java2webapps.lekce6.controller.alkohol.Objem;
 import jakarta.validation.constraints.*;
 
 /**
  *
  */
-public class AlkoholForm {
+public class CokoladaForm {
     @NotBlank
-    private String zbozi;
-    @NotNull
-    private Objem objem;
+    private String druhCokolady;
     @NotBlank
     private String jmeno;
-//    @Min(18)
-    @Max(150)
-    private int vek;
     @Email
-    @NotBlank
     private String email;
     @AssertTrue
     private boolean obchodniPodminky;
     private boolean newsletter;
 
-    public String getZbozi() {
-        return zbozi;
+    public String getDruhCokolady() {
+        return druhCokolady;
     }
 
-    public void setZbozi(String zbozi) {
-        this.zbozi = zbozi;
-    }
-
-    public Objem getObjem() {
-        return objem;
-    }
-
-    public void setObjem(Objem objem) {
-        this.objem = objem;
+    public void setDruhCokolady(String druhCokolady) {
+        this.druhCokolady = druhCokolady;
     }
 
     public String getJmeno() {
@@ -44,14 +31,6 @@ public class AlkoholForm {
 
     public void setJmeno(String jmeno) {
         this.jmeno = jmeno;
-    }
-
-    public int getVek() {
-        return vek;
-    }
-
-    public void setVek(int vek) {
-        this.vek = vek;
     }
 
     public String getEmail() {
